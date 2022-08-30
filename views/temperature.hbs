@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{>header}}
+    <main class="tempsection">
+        <div class="searchbox">
+            <input type="text" name="" id="inputtext" placeholder="Enter the city">
+            <button id="searchbtn">search</button>
+        </div>
+
+        <div class="tempdata">
+            <div class="container">
+                <div class="time">
+                    <h3 id="days"></h3>
+                    <div >
+                        <p id="month"></p>
+                        <span id="time"></span>
+                     </div>
+
+
+                    </div>
+                    <div class="grid">
+                        <div class="left">
+                            <p>temperature</p>
+                            <div id="temp">
+                            </div>
+                            <div id="cityname">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="fa-solid fa-cloud" id="icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="/javascript/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=IBM+Plex+Sans+KR:wght@500;600;700&family=Lato&family=Merriweather+Sans:wght@300&family=Montserrat:wght@500;600&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;;
+}
+header{
+
+    height: 8.4vh;
+    background-color: rgba(10, 7, 7, 0.486);
+}
+
+body{
+    height: 100vh;
+    /* filter: blur(100px); */
+    background: linear-gradient(to right,rgba(0,0,0,.4),rgba(0,0,0,.6)),url("/images/city.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% ;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul li{
+    list-style: none;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main i{
+    font-size: 2.2rem;
+    margin-right: .5rem;
+    color: rgba(0, 255, 255, 0.774);
+    animation: rotate 3s linear infinite;
+}
+.main h1{
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.navlist{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+.navlist li a{
+    font-size:1.2rem;
+}
+.navlist li a:hover{
+    color: rgb(158, 159, 165);
+    transition: .3s;
+}
+.mainsection{
+    display: flex;
+    height: calc(100vh - 20vh);
+    justify-content: center;
+    align-items: center;
+}
+.datasection h1{
+    color: wheat;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: .4rem;
+}
+.datasection p{
+    color: wheat;
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.datasection .btn {
+     background: transparent;
+     border: 1px solid rgb(23, 223, 5);
+     border-radius: 20px;
+     padding: .5rem;
+}
+.btnsection{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.btnsection .btn a{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.btnsection .btn:hover{
+    color: white;
+    border: 1px solid white;
+    transition: .5s;
+    background-color: rgb(23, 223, 5);
+     
+}
+.tempsection{
+    position: relative;
+}
+.tempsection::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91vh;
+    background: linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,.6)),url("/images/cloud.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: .4;
+}
+.searchbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.searchbox input{
+    margin-top: 3rem;
+      font-size: 1rem;
+      font-weight: 700;
+    outline: none;
+    border: 2px solid green;
+    width: 40%;
+    padding: .5rem;
+    border-radius: 5px;
+    z-index: 666;
+
+}
+.searchbox button{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    top: 60%;
+    left: 62%;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid rgb(26, 191, 233);
+    text-transform: capitalize;
+    cursor: pointer;
+    z-index: 999;
+}
+.searchbox button:hover{
+    background-color: rgba(26, 192, 233, 0.842);
+    transition: .5s;
+    color: white;
+
+}
+.tempdata{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.2rem;
+}
+.container{
+    width: 50%;
+    padding: .6rem;
+    text-transform: capitalize;
+    z-index: 66;
+}
+.container .time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(235, 156, 9, 0.973);
+}
+.container .time h3{
+    font-size: 1.8rem;
+    letter-spacing: .2rem;
+}
+
+.container .time p,span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    display: inline-block;
+}
+.container .grid{
+    margin-top: 1rem;
+    padding: 1.6rem;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    background-color: #231a1d98;
+}
+.grid .left p{
+    font-size: 1.8rem;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: .2rem;
+}
+#temp{
+  display: flex;
+
+}
+#cityname{
+    color: rgba(255, 166, 0, 0.836);
+}
+
+.grid .right i{
+    font-size: 11rem;
+    color:#0ccecea2;
+}
+
+
+@keyframes rotate{
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+
+}
+@media screen and ( max-width:978px) {
+        .container{
+            width: 70%;
+        }
+        .searchbox input{
+            width: 60%;
+        }
+        .searchbox button{
+            left: 68%;
+        }
+        body{
+            background-size: 100% 100%;
+        }
+        .datasection h1{
+            font-size: 1.8rem;
+        }
+}
+@media screen and ( max-width:700px) {
+    .container{
+        width: 90%;
+    }
+    .searchbox input{
+        width: 60%;
+    }
+    .searchbox button{
+        left: 65%;
+    }
+    .datasection h1{
+        font-size: 1.4rem;
+    }
+    
+}
+@media screen and ( max-width:548px) {
+    body{
+        background-size: cover;
+    }
+    .tempsection::before{
+        background-size: cover;
+    }
+    .container{
+        width: 95%;
+    }
+    .searchbox input{
+        width: 65%;
+    }
+    .searchbox button{
+        left: 65%;
+    }
+    .grid .right i{
+        font-size: 5rem;
+        color:#0ccecea2;
+    }
+    .main{
+        flex-direction: column;
+    }
+    header{
+        height: 11.8vh;
+    }
+    nav{
+        width: 90vw;
+    }
+    .navlist{
+        justify-content: space-between;
+    }
+    .datasection h1{
+        font-size: 1.2rem;
+    }
+    .datasection p{
+        font-size: 1rem;
+    }
+}
+@media screen and ( max-width:460px) {
+    .searchbox input{
+        width: 75%;
+    }
+    .searchbox button{
+        left: 63%;
+    }
+    .grid .left p{
+        font-size: 1.2rem;
+    }
+}
